@@ -7,8 +7,9 @@ Console.WriteLine (numberA);
 Console.WriteLine (numberB);
 Console.WriteLine (numberA / numberB);*/
 
-int numberC = new random().Next(1, 100);
-int numberD = new random().Next(1, 100);
+int numberA = new Random().Next(1, 100);
+int numberB = new Random().Next(1, 100);
+double result = numberA / numberB;
 Console.WriteLine (numberA);
 Console.WriteLine (numberB);
-Console.WriteLine (numberA / numberB);
+Console.WriteLine ($"Результат деления: {result}");
