@@ -25,6 +25,7 @@ switch (num1)
 
     */
 /*Задача 2 :вводится четыре координаты а ( x y) и b(x y) расчитать расстояние между ними*/
+/*
 Console.WriteLine("Введите  х координату точки a");
 int ax = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите  y координату точки a");
@@ -35,3 +36,11 @@ Console.WriteLine("Введите  y координату точки b");
 int by = int.Parse(Console.ReadLine()!);
 double dim = Math.Sqrt(Math.Pow((ay-by), 2) + Math.Pow((ax-bx), 2));
 Console.WriteLine($"Расстояние между точками {Math.Round(dim, 2)}");
+*/
+/* задача 3 найти все квадраты от 1 до N*/
+Console.WriteLine("Введите число N");
+int N = int.Parse(Console.ReadLine()!);
+for (int i = 1; i <= N; i++)
+{
+    Console.Write($"{Math.Pow(i, 2)} ");
+}
