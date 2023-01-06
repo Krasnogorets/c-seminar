@@ -1,0 +1,15 @@
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar3\Exam01\obj\Debug\net6.0\Exam01.csproj.AssemblyReference.cache
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar3\Exam01\obj\Debug\net6.0\Exam01.GeneratedMSBuildEditorConfig.editorconfig
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar3\Exam01\obj\Debug\net6.0\Exam01.AssemblyInfoInputs.cache
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar3\Exam01\obj\Debug\net6.0\Exam01.AssemblyInfo.cs
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar3\Exam01\obj\Debug\net6.0\Exam01.csproj.CoreCompileInputs.cache
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar3\Exam01\bin\Debug\net6.0\Exam01.exe
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar3\Exam01\bin\Debug\net6.0\Exam01.deps.json
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar3\Exam01\bin\Debug\net6.0\Exam01.runtimeconfig.json
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar3\Exam01\bin\Debug\net6.0\Exam01.dll
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar3\Exam01\bin\Debug\net6.0\Exam01.pdb
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar3\Exam01\obj\Debug\net6.0\Exam01.dll
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar3\Exam01\obj\Debug\net6.0\refint\Exam01.dll
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar3\Exam01\obj\Debug\net6.0\Exam01.pdb
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar3\Exam01\obj\Debug\net6.0\Exam01.genruntimeconfig.cache
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar3\Exam01\obj\Debug\net6.0\ref\Exam01.dll
