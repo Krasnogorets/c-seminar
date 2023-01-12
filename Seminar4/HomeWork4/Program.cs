@@ -4,13 +4,13 @@
 
 2, 4 -> 16*/
 Console.Clear();
-/*
+
 Console.WriteLine("Введите число A:");
 int A = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите число B:");
 int B = int.Parse(Console.ReadLine()!);
 
-Console.Write($"{A} в степени {B} = {GetExponent(A,B)}");
+Console.WriteLine($"{A} в степени {B} = {GetExponent(A,B)}");
 
 
 // method
@@ -24,7 +24,7 @@ int GetExponent( int Ax, int Bx)
     }
     return X;
 }
-*/
+
 
 
 /*
@@ -35,7 +35,7 @@ int GetExponent( int Ax, int Bx)
 82 -> 10
 
 9012 -> 12*/
-/*
+
 Console.WriteLine("Введите число :");
 string M = Convert.ToString(Console.ReadLine()!);
 if (M =="")
@@ -45,11 +45,11 @@ if (M =="")
 } else{
 
 
-int A = int.Parse(M);
+int C = int.Parse(M);
 
-Console.WriteLine($"Сумма цифр числа {A} = {Sum(A)}, рассчитано циклом");
+Console.WriteLine($"Сумма цифр числа {C} = {Sum(C)}, рассчитано циклом");
 
-Console.WriteLine($"Сумма цифр числа {A} = {Sum1(A,M)}, рассчитано через string");
+Console.WriteLine($"Сумма цифр числа {C} = {Sum1(C,M)}, рассчитано через string");
 }
 // method
 int Sum (int k)
@@ -89,14 +89,15 @@ int Sum1 (int k, string M)
     return sum;
     
 }
-*/
+
 //Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран. (числа берете любые)
 
 int [] massive = new int[8];
 FillArray(massive);
-Console.Write($"[{String.Join(",", massive)}]");
+Console.WriteLine($"Массив из 8 элементов:");
+Console.WriteLine($"[{String.Join(",", massive)}]");
 
-//method
+//method5
 void FillArray(int[] collection)
 {
     int len = collection.Length;
