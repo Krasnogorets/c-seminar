@@ -78,15 +78,8 @@ double GetDifMinMax(double[] NewArray)
     double min = 0;
     double max = 0;
     double diff = 0;
-    if ( NewArray[0] > NewArray[1])
-        {   max = NewArray[0];
-            min = NewArray[1];
-        } 
-    else
-    {
-        max = NewArray[1];
-        min = NewArray[0];
-    }
+    max = NewArray[0];
+    min = NewArray[1];
     for (int i = 2; i < NewArray.Length; i++)
     {
         if (NewArray[i] > max)
