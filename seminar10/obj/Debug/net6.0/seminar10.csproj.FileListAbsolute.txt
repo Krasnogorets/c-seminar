@@ -1,0 +1,15 @@
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar10\obj\Debug\net6.0\seminar10.csproj.AssemblyReference.cache
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar10\obj\Debug\net6.0\seminar10.GeneratedMSBuildEditorConfig.editorconfig
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar10\obj\Debug\net6.0\seminar10.AssemblyInfoInputs.cache
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar10\obj\Debug\net6.0\seminar10.AssemblyInfo.cs
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar10\obj\Debug\net6.0\seminar10.csproj.CoreCompileInputs.cache
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar10\bin\Debug\net6.0\seminar10.exe
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar10\bin\Debug\net6.0\seminar10.deps.json
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar10\bin\Debug\net6.0\seminar10.runtimeconfig.json
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar10\bin\Debug\net6.0\seminar10.dll
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar10\bin\Debug\net6.0\seminar10.pdb
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar10\obj\Debug\net6.0\seminar10.dll
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar10\obj\Debug\net6.0\refint\seminar10.dll
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar10\obj\Debug\net6.0\seminar10.pdb
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar10\obj\Debug\net6.0\seminar10.genruntimeconfig.cache
+D:\ОБУЧЕНИЕ GEEKBRAINS\знакомство с языками программирования\seminars\seminar10\obj\Debug\net6.0\ref\seminar10.dll
