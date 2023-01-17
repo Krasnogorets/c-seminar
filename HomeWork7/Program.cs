@@ -55,14 +55,15 @@ void PrintArray(double[,] InArray)
 8 4 2 4
 
 17 -> такого числа в массиве нет*/
-/*
+
 Console.Clear();
 int[,] array1 = CreateArray1(9,9);
 PrintArray1(array1);
 Console.Write("Введите строку и ряд массива через пробел:");// по условию не понятно, как выбирается,
 //будем считать что как видит на экране, а не реальный индекс
 string[] param = Console.ReadLine()!.Split(" ", StringSplitOptions.RemoveEmptyEntries);
-if ((int.Parse(param[0])<= array1.GetLength(0))&&(int.Parse(param[1])<= array1.GetLength(1)))
+if ((int.Parse(param[0])<= array1.GetLength(0))&&(int.Parse(param[1])<= array1.GetLength(1))
+    &&(int.Parse(param[0])>0)&&(int.Parse(param[1])>0))
 {
     Console.Write($"по данному индексу число:{array1[int.Parse(param[0])-1,int.Parse(param[1])-1]}");
 }
@@ -94,7 +95,7 @@ void PrintArray1(int[,] InArray)
         Console.WriteLine();
     }
 }
-*/
+
 /*Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 
 Например, задан массив:
@@ -103,7 +104,7 @@ void PrintArray1(int[,] InArray)
 8 4 2 4
 Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.*/
 
-
+/*
 int[,] array1 = CreateArray1(4, 6);
 PrintArray1(array1);
 double[] array2 = GetMidSum(array1);
@@ -147,3 +148,4 @@ double[] GetMidSum(int[,] inArray)
     }
     return result;
 }
+*/
