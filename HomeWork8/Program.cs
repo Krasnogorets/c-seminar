@@ -70,7 +70,7 @@ void NewArrayOrder(int[,] inArray)
     }
 }
 */
-/*Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая 
+/*Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая
 будет находить строку с наименьшей суммой элементов.
 Например, задан массив:
 1 4 7 2
@@ -79,7 +79,7 @@ void NewArrayOrder(int[,] inArray)
 5 2 6 7
 Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 */
-Console.Clear();
+/*Console.Clear();
 Console.Write("Введите кол-во строк:");
 int row = int.Parse(Console.ReadLine()!);
 Console.Write("Введите кол-во столбцов:");
@@ -152,7 +152,81 @@ int FindIndexMinRowSum (int[,]inArray) // возвращает индекс ст
             inArray[0,i] = temp;
         }
     }
-    return indexMin +1; /* сделал так, чтобы возвращал не реальный индекс, 
-    а как строка визуально выглядит на экране, если сумма строк совпадает выводится первая,
-    согласно приницпу KISS, не стал усложнять, чтобы сделать доп условие, т.к. такой задачи не стояло*/
+    return indexMin +1; // сделал так, чтобы возвращал не реальный индекс,
+                        //а как строка визуально выглядит на экране, если сумма строк совпадает выводится первая,
+                        //согласно приницпу KISS, не стал усложнять, чтобы сделать доп условие,
+                        //т.к. такой задачи не стояло
+}
+*/
+/*Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+Например, заданы 2 массива:
+1 4 7 2
+5 9 2 3
+8 4 2 4
+5 2 6 7
+и
+1 5 8 5
+4 9 4 2
+7 2 2 6
+2 3 4 7
+Их произведение будет равно следующему массиву:
+1 20 56 10
+20 81 8 6
+56 8 4 24
+10 6 24 49*/
+Console.Clear();
+int[,] Matrix = GetArray(6, 6, 1, 10);
+PrintArray(Matrix);
+int[,] Matrix1 = GetArray(6, 6, 1, 10);
+PrintArrayRight(Matrix1, 20);
+PrintArrayRight(MatrixMultPl(Matrix,Matrix1), 40);
+Console.WriteLine();
+
+//method
+int[,] GetArray(int rows, int col, int min, int max)
+{
+    int[,] result = new int[rows, col];
+    for (int i = 0; i < result.GetLength(0); i++)
+    {
+        for (int j = 0; j < result.GetLength(1); j++)
+        {
+            result[i, j] = new Random().Next(min, max);
+        }
+    }
+    return result;
+}
+void PrintArray(int[,] inArray)
+{
+    for (int i = 0; i < inArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < inArray.GetLength(1); j++)
+        {
+            Console.Write($" {inArray[i, j]}");
+        }
+        Console.WriteLine();
+    }
+}
+
+void PrintArrayRight(int[,] inArray, int x) // более удобный метод вывода массива справа
+{
+    for (int i = 0; i < inArray.GetLength(0); i++)
+    {
+        Console.SetCursorPosition(x, i);
+        for (int j = 0; j < inArray.GetLength(1); j++)
+        {
+            Console.Write($" {inArray[i, j]}");
+        }
+    }
+}
+int [,] MatrixMultPl (int[,]inArray, int[,]inArray1)
+{
+    int[,]result = new int[inArray.GetLength(0),inArray.GetLength(0)];
+    for (int i = 0; i < inArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < inArray.GetLength(0); j++)
+        {
+            result[i,j] = inArray[i,j] * inArray1[i,j];
+        }
+    }
+    return result;
 }
