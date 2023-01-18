@@ -174,7 +174,7 @@ int FindIndexMinRowSum (int[,]inArray) // возвращает индекс ст
 20 81 8 6
 56 8 4 24
 10 6 24 49*/
-Console.Clear();
+/*Console.Clear();
 int[,] Matrix = GetArray(6, 6, 1, 10);
 PrintArray(Matrix);
 int[,] Matrix1 = GetArray(6, 6, 1, 10);
@@ -229,4 +229,100 @@ int [,] MatrixMultPl (int[,]inArray, int[,]inArray1)
         }
     }
     return result;
+}
+*/
+/*Задача 60. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+массив размером 2 x 2 x 2
+12(0,0,0) 22(0,0,1)
+45(1,0,0) 53(1,0,1)*/
+Console.Clear();
+Console.Write("Введите кол-во строк:");
+int row = int.Parse(Console.ReadLine()!);
+Console.Write("Введите кол-во столбцов:");
+int col = int.Parse(Console.ReadLine()!);
+Console.Write("Введите глубину масиива:");
+int width = int.Parse(Console.ReadLine()!);
+if (row * col * width >90)// только двузначные => от 10 до 99
+{
+    Console.Write("такой массив невозможно создать, чтобы соответствовать условиям");
+}
+else
+{
+    int[] randomArray = GetUniqRandom(row,col,width, 10,100);
+    int[,,] NewDArray = FillArray3D(row,col,width, randomArray);
+    Print3dArray(NewDArray);
+}
+
+//method
+
+int[] GetUniqRandom (int rows, int col, int width, int min, int max)
+{
+    int[] result = new int[rows*col*width]; // массив для создания уникальных элементов
+    result[0] = new Random().Next(min, max); // 0 элемент создаем без проверки на уникальность
+    for (int i = 1; i < result.GetLength(0); i++)
+    {
+        result[i] = new Random().Next(min, max);
+        for (int j = 0; j < i; j++) // создаем цикл проверки на уникальность сравнивая с предыдущими
+        {
+            if (result[j] == result[i])
+            {
+                i--;
+                continue;        
+            }
+        }
+    }
+    return result;
+}
+
+void NewArrayOrder1(int[] inArray) // метод для промежуточного тестирования программы
+{
+    int temp = 0; // промежуточная для записи переносимых данных при сортировке
+    
+        for (int j = 0; j < inArray.GetLength(0); j++)
+        {
+            for (int k = j + 1; k < inArray.GetLength(0); k++)
+            {
+                if (inArray[k] < inArray[j])
+                {
+                    temp = inArray[j];
+                    inArray[j] = inArray[k];
+                    inArray[k] = temp;
+                }
+            }
+        }
+    
+}
+
+int[,,] FillArray3D(int rows, int col, int width, int[]inArray)
+{
+    int[,,] result = new int[rows, col, width];
+    int count = 0;
+    for (int i = 0; i < result.GetLength(0); i++)
+    {
+        for (int j = 0; j < result.GetLength(1); j++)
+        {
+            for (int k = 0; k < width; k++)
+            {
+                result[i, j, k] = inArray[count];
+                count++;
+            }
+        }
+    }
+    return result;
+}
+void Print3dArray (int[,,]NewDArray)
+{
+    for (int i = 0; i < NewDArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < NewDArray.GetLength(1); j++)
+        {
+            for (int k = 0; k < NewDArray.GetLength(2); k++)
+            {
+                Console.Write($" {NewDArray[i, j ,k]} ( {i},{j},{k} )");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine();
+    }
 }
