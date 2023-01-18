@@ -236,7 +236,7 @@ int [,] MatrixMultPl (int[,]inArray, int[,]inArray1)
 массив размером 2 x 2 x 2
 12(0,0,0) 22(0,0,1)
 45(1,0,0) 53(1,0,1)*/
-Console.Clear();
+/*Console.Clear();
 Console.Write("Введите кол-во строк:");
 int row = int.Parse(Console.ReadLine()!);
 Console.Write("Введите кол-во столбцов:");
@@ -275,7 +275,8 @@ int[] GetUniqRandom (int rows, int col, int width, int min, int max)
     return result;
 }
 
-void NewArrayOrder1(int[] inArray) // метод для промежуточного тестирования программы
+void NewArrayOrder1(int[] inArray) // метод сортировки для промежуточного тестирования программы
+                                    // проверки уникальности элементов
 {
     int temp = 0; // промежуточная для записи переносимых данных при сортировке
     
@@ -311,17 +312,60 @@ int[,,] FillArray3D(int rows, int col, int width, int[]inArray)
     }
     return result;
 }
-void Print3dArray (int[,,]NewDArray)
+void Print3dArray (int[,,]NewDArray) // вывод послойно
 {
-    for (int i = 0; i < NewDArray.GetLength(0); i++)
+    for (int i = 0; i < NewDArray.GetLength(2); i++)
     {
-        for (int j = 0; j < NewDArray.GetLength(1); j++)
+        Console.WriteLine($" Слой {i}-ый ");
+        for (int j = 0; j < NewDArray.GetLength(0); j++)
         {
-            for (int k = 0; k < NewDArray.GetLength(2); k++)
+            for (int k = 0; k < NewDArray.GetLength(1); k++)
             {
-                Console.Write($" {NewDArray[i, j ,k]} ( {i},{j},{k} )");
+                Console.Write($" {NewDArray[j, k ,i]} ( {j},{k},{i} )"); 
             }
             Console.WriteLine();
+        }
+        Console.WriteLine();
+    }
+}
+*/
+/*Задача 62. Заполните спирально массив 4 на 4.
+
+Например, на выходе получается вот такой массив:
+
+1 2 3 4
+
+12 13 14 5
+
+11 16 15 6
+
+10 9 8 7*/
+Console.Clear();
+int[,] array = new int[4,4];//
+FillArraySnakeType(array);
+PrintArray(array);
+
+//method
+void FillArraySnakeType(int[,] inArray )
+{
+    
+    int[,] arrayPath = new int[,] // массив с маской индексов столбцов и строк для заполнения змейкой, 
+    {
+        {0,0,0,0,1,2,3,3,3,3,2,1,1,1,2,2},
+        {0,1,2,3,3,3,3,2,1,0,0,0,1,2,2,1},
+        };
+    for (int i = 0; i < inArray.GetLength(0)*inArray.GetLength(0); i++)
+    {
+        inArray[arrayPath[0,i],arrayPath[1,i]]= i;
+    }
+}
+void PrintArray(int[,] inArray)
+{
+    for (int i = 0; i < inArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < inArray.GetLength(1); j++)
+        {
+            Console.Write($" {inArray[i, j]}");
         }
         Console.WriteLine();
     }
