@@ -341,8 +341,8 @@ void Print3dArray (int[,,]NewDArray) // вывод послойно
 
 10 9 8 7*/
 Console.Clear();
-int[,] array = new int[4,4];//
-FillArraySnakeType(array);
+int[,] array = new int[8,8];//
+FillArraySnakeType2(array);
 PrintArray(array);
 
 //method
@@ -368,5 +368,22 @@ void PrintArray(int[,] inArray)
             Console.Write($" {inArray[i, j]}");
         }
         Console.WriteLine();
+    }
+}
+
+void FillArraySnakeType2(int[,] inArray )// Можно решить эту задачу через while, где n - размер массива, number - счетчик
+{   
+    int number =0;
+    int i = 0;
+    int j =0;
+    int n = inArray.GetLength(0);
+    while(number <= n * n)
+    {
+        inArray[i, j] = number;
+        if((i <= (j + 1)) && ((i + j) < (n - 1))) j++;
+        else if ((i < j) && ((i + j) >= (n - 1))) i++;
+        else if ((i >= j )&& ((i + j) > (n - 1))) j--;
+        else i--;
+        number++;
     }
 }
